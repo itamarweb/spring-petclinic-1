@@ -37,6 +37,7 @@ public class Visit extends BaseEntity {
 
 	int x = 5;
 	int x2 = 6;
+	int x3 = 7;
 
 	@Column(name = "visit_date")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
