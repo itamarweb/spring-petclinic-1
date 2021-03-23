@@ -21,6 +21,8 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
+    - name: Format Code
+      run: ./mvnw spring-javaformat:apply
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots verify
       
